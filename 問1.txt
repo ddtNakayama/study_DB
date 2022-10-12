@@ -1,0 +1,7 @@
+# 重複を除いた都道府県を取得する
+SELECT DISTINCT
+	prefecture
+# アンケート回答テーブルから
+FROM
+	quest
+;
