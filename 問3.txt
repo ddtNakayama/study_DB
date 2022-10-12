@@ -1,0 +1,15 @@
+# すべての列を取得する
+SELECT
+	*
+# 貸し出し記録テーブル
+FROM
+	rental
+# 未返却かつ貸出日が2012/12/1より前のレコードを対象とする
+WHERE
+	returned = 0
+		AND
+	rental_date < '2012-12-01'
+# 貸出日の昇順でソートする
+ORDER BY
+	rental_date
+;
