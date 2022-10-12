@@ -1,0 +1,10 @@
+# 回答者名を取得する
+SELECT
+	name
+# アンケート回答テーブルから
+FROM
+	quest
+# 回答者名が「子」で終わらないレコードを対象とする
+WHERE
+	name NOT LIKE '%子'
+;
