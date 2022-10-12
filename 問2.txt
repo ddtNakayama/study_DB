@@ -1,0 +1,14 @@
+# 氏、名、E-Mailアドレスを取得する
+SELECT
+	l_name,
+	f_name,
+	email
+# ユーザテーブルから
+FROM
+	usr
+# 住所（都道府県名）が「東京都」かつE-Mailアドレスの末尾が「examples.com」のレコードを対象とする
+WHERE
+	prefecture = '東京都'
+		AND
+	email LIKE '%examples.com'
+;
