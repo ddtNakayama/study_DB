@@ -1,0 +1,11 @@
+# 店舗コードごとの売上高(千円)の合計値を取得する
+SELECT
+	s_id,
+	SUM(s_value)
+# 月間売り上げテーブルから
+FROM
+	sales
+# 店舗コードでグループ化する
+GROUP BY
+	s_id
+;
