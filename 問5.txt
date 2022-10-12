@@ -1,0 +1,21 @@
+SELECT
+	page_id,
+	# アクセス数をカウントしたいならSUMではなくCOUNT
+	SUM(*)
+FROM
+	access_log
+# メニューコードごとにグループ化するならORDER BYではなくGROUP BY
+ORDER BY
+	page_id
+;
+
+
+
+SELECT
+	page_id,
+	COUNT(*)
+FROM
+	access_log
+GROUP BY
+	page_id
+;
