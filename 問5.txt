@@ -7,3 +7,13 @@ WHERE
 	# '%社'が正しい
 	publish LIKE '_社'
 ;
+
+
+
+SELECT
+	title
+FROM
+	books
+WHERE
+	publish LIKE '%社'
+;
