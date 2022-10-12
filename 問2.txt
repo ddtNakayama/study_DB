@@ -1,0 +1,11 @@
+# 都道府県ごとの年齢の平均を取得する。それぞれには別名を設定する
+SELECT
+	prefecture AS 都道府県名,
+	AVG(age) AS 平均年齢
+# アンケート回答テーブル
+FROM
+	quest
+# 都道府県でグループ化する
+GROUP BY
+	prefecture
+;
