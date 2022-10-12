@@ -1,0 +1,7 @@
+# 書名を取得する
+SELECT
+	title
+# 書籍情報テーブルから
+FROM
+	books
+;
