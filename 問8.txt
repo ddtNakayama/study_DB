@@ -1,0 +1,11 @@
+SELECT
+	# 取得する列名を区切る「,」がない
+	title
+	publish
+	price
+FROM
+	books
+WHERE
+	# 「=」があるため5,000円が含まれてしまう
+	price <= 5000
+;
