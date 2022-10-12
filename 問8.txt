@@ -1,11 +1,11 @@
 SELECT
-	# �擾����񖼂���؂�u,�v���Ȃ�
+	# 取得する列名を区切る「,」がない
 	title
 	publish
 	price
 FROM
 	books
 WHERE
-	# �u=�v�����邽��5,000�~���܂܂�Ă��܂�
+	# 「=」があるため5,000円が含まれてしまう
 	price <= 5000
 ;
