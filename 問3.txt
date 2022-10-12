@@ -1,0 +1,10 @@
+# 重複を除いた利用者の氏名、フリガナの氏名を取得する
+SELECT DISTINCT
+	l_name,
+	f_name,
+	l_name_kana,
+	f_name_kana
+# ユーザテーブルから
+FROM
+	usr
+;
