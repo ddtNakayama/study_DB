@@ -1,0 +1,11 @@
+# 商品名、単価を取得する。それぞれには別名を設定する
+SELECT
+	p_name AS 商品名,
+	price AS 価格
+# 商品テーブルから
+FROM
+	product
+# 単価の昇順でソートする
+ORDER BY
+	price ASC
+;
