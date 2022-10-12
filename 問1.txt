@@ -1,7 +1,7 @@
-# d•¡‚ðœ‚¢‚½“s“¹•{Œ§‚ðŽæ“¾‚·‚é
+# é‡è¤‡ã‚’é™¤ã„ãŸéƒ½é“åºœçœŒã‚’å–å¾—ã™ã‚‹
 SELECT DISTINCT
 	prefecture
-# ƒAƒ“ƒP[ƒg‰ñ“šƒe[ƒuƒ‹‚©‚ç
+# ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆå›žç­”ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	quest
 ;
