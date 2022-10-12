@@ -1,0 +1,11 @@
+# 利用者コード、ISBNコードを取得する
+SELECT
+	user_id,
+	isbn
+# 貸し出し記録テーブルから
+FROM
+	rental
+# 貸し出し中のレコードを対象とする
+WHERE
+	returned = 0
+;
