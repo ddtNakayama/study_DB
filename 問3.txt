@@ -1,12 +1,12 @@
-# ISBNƒR[ƒhA‘–¼A‰¿Ši‚ðŽæ“¾‚·‚é
+# ISBNã‚³ãƒ¼ãƒ‰ã€æ›¸åã€ä¾¡æ ¼ã‚’å–å¾—ã™ã‚‹
 SELECT
 	isbn,
 	title,
 	price
-# ‘Ðî•ñƒe[ƒuƒ‹‚©‚ç
+# æ›¸ç±æƒ…å ±ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	books
-# ‘–¼‚ªuSQL››v‚ÌƒŒƒR[ƒh‚ð‘ÎÛ‚Æ‚·‚é
+# æ›¸åãŒã€ŒSQLâ—‹â—‹ã€ã®ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’å¯¾è±¡ã¨ã™ã‚‹
 WHERE
 	title LIKE 'SQL__'
 ;
