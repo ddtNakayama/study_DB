@@ -1,0 +1,15 @@
+# 回答者名、本書の評価、本書の感想を取得する
+SELECT
+	name,
+	answer1,
+	answer2
+# アンケート回答テーブルから
+FROM
+	quest
+# 回答日時を降順でソートする
+ORDER BY
+	answered DESC
+# 先頭から10件取得する
+LIMIT
+	0,10
+;
