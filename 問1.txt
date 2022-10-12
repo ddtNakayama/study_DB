@@ -1,10 +1,10 @@
-# ���ׂĂ̗���擾����
+# すべての列を取得する
 SELECT
 	*
-# ���ҏ��e�[�u������
+# 著者情報テーブルから
 FROM
 	author
-# ���Җ����u�R�c�v����n�܂郌�R�[�h��ΏۂƂ���
+# 著者名が「山田」から始まるレコードを対象とする
 WHERE
-	name LIKE '�R�c%'
+	name LIKE '山田%'
 ;
