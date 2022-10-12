@@ -1,7 +1,7 @@
-# ‘–¼‚ðŽæ“¾‚·‚é
+# æ›¸åã‚’å–å¾—ã™ã‚‹
 SELECT
 	title
-# ‘Ðî•ñƒe[ƒuƒ‹‚©‚ç
+# æ›¸ç±æƒ…å ±ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	books
 ;
