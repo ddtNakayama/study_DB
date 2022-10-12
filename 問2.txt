@@ -1,7 +1,7 @@
-# d•¡‚ðœ‚¢‚½ƒŠƒ“ƒNŒ³‚ÌURL‚ðŽæ“¾‚·‚é
+# é‡è¤‡ã‚’é™¤ã„ãŸãƒªãƒ³ã‚¯å…ƒã®URLã‚’å–å¾—ã™ã‚‹
 SELECT DISTINCT
 	referer
-# ƒAƒNƒZƒX‹L˜^ƒe[ƒuƒ‹‚©‚ç
+# ã‚¢ã‚¯ã‚»ã‚¹è¨˜éŒ²ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	access_log
 ;
