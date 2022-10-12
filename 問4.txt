@@ -1,11 +1,11 @@
-# �Ј��̎������擾����
+# 社員の氏名を取得する
 SELECT
 	l_name,
 	f_name
-# �Ј��e�[�u������
+# 社員テーブルから
 FROM
 	employee
-# ���̃J�i���u�A�v����n�܂郌�R�[�h��ΏۂƂ���
+# 氏のカナが「ア」から始まるレコードを対象とする
 WHERE
-	l_name_kana LIKE '�A%'
+	l_name_kana LIKE 'ア%'
 ;
