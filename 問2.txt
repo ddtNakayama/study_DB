@@ -1,0 +1,12 @@
+# ISBNコード、書名、出版社を取得する
+SELECT
+	isbn,
+	title,
+	publish
+# 書籍情報テーブルから
+FROM
+	books
+# 出版社が「日経BP」、「翔泳社」のレコードを対象とする
+WHERE
+	publish IN ('日経BP','翔泳社')
+;
