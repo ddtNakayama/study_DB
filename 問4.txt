@@ -1,0 +1,11 @@
+# 社員の氏名を取得する
+SELECT
+	l_name,
+	f_name
+# 社員テーブルから
+FROM
+	employee
+# 氏のカナが「ア」から始まるレコードを対象とする
+WHERE
+	l_name_kana LIKE 'ア%'
+;
