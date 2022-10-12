@@ -1,11 +1,11 @@
-# ���p�҃R�[�h�AISBN�R�[�h���擾����
+# 利用者コード、ISBNコードを取得する
 SELECT
 	user_id,
 	isbn
-# �݂��o���L�^�e�[�u������
+# 貸し出し記録テーブルから
 FROM
 	rental
-# �݂��o�����̃��R�[�h��ΏۂƂ���
+# 貸し出し中のレコードを対象とする
 WHERE
 	returned = 0
 ;
