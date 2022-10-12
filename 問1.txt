@@ -1,0 +1,7 @@
+# ‚·‚×‚Ä‚Ì—ñ‚ðŽæ“¾‚·‚é
+SELECT
+	*
+# ‘Ðî•ñƒe[ƒuƒ‹‚©‚ç
+FROM
+	books
+;
