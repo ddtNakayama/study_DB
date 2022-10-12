@@ -1,0 +1,11 @@
+# 出版社ごとの価格の最大値を取得する
+SELECT
+	publish,
+	MAX(price)
+# 書籍情報テーブルから
+FROM
+	books
+# 出版社でグループ化する
+GROUP BY
+	publish
+;
