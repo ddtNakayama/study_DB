@@ -1,0 +1,7 @@
+# ‘–¼‚ðŽæ“¾‚·‚é
+SELECT
+	title
+# ‘Ðî•ñƒe[ƒuƒ‹‚©‚ç
+FROM
+	books
+;
