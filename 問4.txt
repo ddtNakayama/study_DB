@@ -6,3 +6,12 @@ SELECTS
 FROM
 	books
 ;
+
+
+
+SELECT
+	title,
+	publish
+FROM
+	books
+;
