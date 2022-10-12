@@ -1,0 +1,12 @@
+# すべての列を取得する
+SELECT
+	*
+# アンケート回答テーブルから
+FROM
+	quest
+# 性別が「女」かつ年齢が20～29のレコードを対象とする
+WHERE
+	sex = '女'
+		AND
+	age BETWEEN 20 AND 29
+;
