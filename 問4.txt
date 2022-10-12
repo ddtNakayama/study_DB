@@ -5,3 +5,11 @@ from
 	books
 # ;が:になっている
 :
+
+
+
+select
+	*
+from
+	books
+;
