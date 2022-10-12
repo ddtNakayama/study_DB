@@ -1,7 +1,7 @@
-# SELECT�uS�v�͌��
+# SELECT「S」は誤り
 SELECTS
 	title
-# �Ώۂ̗����؂�u,�v���Ȃ�
+# 対象の列を区切る「,」がない
 	publish
 FROM
 	books
