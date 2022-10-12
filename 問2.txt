@@ -1,0 +1,7 @@
+# 重複を除いたリンク元のURLを取得する
+SELECT DISTINCT
+	referer
+# アクセス記録テーブルから
+FROM
+	access_log
+;
