@@ -1,0 +1,12 @@
+# 回答者名、性別、都道府県を取得する
+SELECT
+	name,
+	sex,
+	prefecture
+# アンケート回答テーブルから
+FROM
+	quest
+# 年齢の値が30～39のレコードを対象とする
+WHERE
+	age BETWEEN 30 AND 39
+;
