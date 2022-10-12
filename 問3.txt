@@ -1,0 +1,12 @@
+# ISBNコード、書名、価格を取得する
+SELECT
+	isbn,
+	title,
+	price
+# 書籍情報テーブルから
+FROM
+	books
+# 書名が「SQL○○」のレコードを対象とする
+WHERE
+	title LIKE 'SQL__'
+;
