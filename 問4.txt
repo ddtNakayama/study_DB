@@ -1,0 +1,8 @@
+# SELECT「S」は誤り
+SELECTS
+	title
+# 対象の列を区切る「,」がない
+	publish
+FROM
+	books
+;
