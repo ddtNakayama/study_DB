@@ -1,8 +1,8 @@
-# ¤•i–¼‚Æ’P‰¿‚ðŽæ“¾‚·‚é
+# å•†å“åã¨å˜ä¾¡ã‚’å–å¾—ã™ã‚‹
 SELECT
 	p_name,
 	price
-# ¤•iƒe[ƒuƒ‹‚©‚ç
+# å•†å“ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	product
 ;
