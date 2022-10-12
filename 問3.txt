@@ -1,0 +1,18 @@
+# 利用者コード、ISBNコード、貸出日を取得する
+SELECT
+	user_id,
+	isbn,
+	rental_date
+# 貸し出し記録テーブル
+FROM
+	rental
+# 貸し出し中のレコードを対象とする
+WHERE
+	returned = 0
+# 貸出日の昇順でソートする
+ORDER BY
+	rental_date
+# 先頭行から5件取得する
+LIMIT
+	5
+;
