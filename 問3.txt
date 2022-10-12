@@ -1,0 +1,12 @@
+# 利用者氏名、E-Mailアドレスを取得する
+SELECT
+	l_name,
+	f_name,
+	email
+# ユーザテーブルから
+FROM
+	usr
+# 住所(都道府県名)が「東京都」でないレコードを対象とする
+WHERE
+	prefecture <> '東京都'
+;
