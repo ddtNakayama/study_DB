@@ -1,12 +1,12 @@
-# —˜—pŽÒŽ–¼AE-MailƒAƒhƒŒƒX‚ðŽæ“¾‚·‚é
+# åˆ©ç”¨è€…æ°åã€E-Mailã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å–å¾—ã™ã‚‹
 SELECT
 	l_name,
 	f_name,
 	email
-# ƒ†[ƒUƒe[ƒuƒ‹‚©‚ç
+# ãƒ¦ãƒ¼ã‚¶ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	usr
-# ZŠ(“s“¹•{Œ§–¼)‚ªu“Œ‹ž“sv‚Å‚È‚¢ƒŒƒR[ƒh‚ð‘ÎÛ‚Æ‚·‚é
+# ä½æ‰€(éƒ½é“åºœçœŒå)ãŒã€Œæ±äº¬éƒ½ã€ã§ãªã„ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’å¯¾è±¡ã¨ã™ã‚‹
 WHERE
-	prefecture <> '“Œ‹ž“s'
+	prefecture <> 'æ±äº¬éƒ½'
 ;
