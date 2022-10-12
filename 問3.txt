@@ -1,0 +1,9 @@
+# 社員名(氏)、社員名(名)、役職を取得する
+SELECT
+	l_name,
+	f_name,
+	class
+# 社員テーブルから
+FROM
+	employee
+;
