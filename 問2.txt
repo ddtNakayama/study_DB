@@ -1,0 +1,13 @@
+# 都道府県、性別ごとに本書の評価の平均を取得する
+SELECT
+	prefecture,
+	sex,
+	AVG(answer1)
+# アンケート回答テーブルから
+FROM
+	quest
+# 都道府県、性別でグループ化する
+GROUP BY
+	prefecture,
+	sex
+;
