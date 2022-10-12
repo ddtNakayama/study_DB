@@ -1,9 +1,9 @@
-# ŽÐˆõ–¼(Ž)AŽÐˆõ–¼(–¼)A–ðE‚ðŽæ“¾‚·‚é
+# ç¤¾å“¡å(æ°)ã€ç¤¾å“¡å(å)ã€å½¹è·ã‚’å–å¾—ã™ã‚‹
 SELECT
 	l_name,
 	f_name,
 	class
-# ŽÐˆõƒe[ƒuƒ‹‚©‚ç
+# ç¤¾å“¡ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰
 FROM
 	employee
 ;
