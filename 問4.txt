@@ -6,3 +6,11 @@ SELECT ALL
 FROM
 	employee
 ;
+
+
+
+SELECT DISTINCT
+	class
+FROM
+	employee
+;
