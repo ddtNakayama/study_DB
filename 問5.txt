@@ -1,0 +1,26 @@
+SELECT
+	prefecture,
+	sex,
+	# グループ化していない年齢を取得することはできない
+	age,
+	# 別名を設定するのは「IS」ではなく「AS」
+	AVG(answer1) IS 評価価格
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;
+
+
+
+SELECT
+	prefecture,
+	sex,
+	AVG(answer1) AS 評価価格
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;
