@@ -1,0 +1,7 @@
+# ‚·‚×‚Ä‚Ì—ñ‚ðŽæ“¾‚·‚é
+SELECT
+	*
+# ’˜ŽÒî•ñƒe[ƒuƒ‹‚©‚ç
+FROM
+	author
+;
