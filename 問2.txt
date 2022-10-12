@@ -1,0 +1,16 @@
+# 氏、名、住所(都道府県名)を取得する
+SELECT
+	l_name,
+	f_name,
+	prefecture
+# ユーザテーブルから
+FROM
+	usr
+# 住所(都道府県名)が「東京都」「千葉県」「神奈川県」いずれかのレコードを対象とする
+WHERE
+	prefecture IN ('東京都','千葉県','神奈川県')
+# 氏カナ、名カナの昇順でソートする
+ORDER BY
+	l_name_kana,
+	f_name_kana ASC
+;
