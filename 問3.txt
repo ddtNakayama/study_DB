@@ -1,0 +1,11 @@
+# 住所(都道府県名)ごとのレコード件数を取得する。それぞれには別名を設定する
+SELECT
+	prefecture AS 都道府県名,
+	COUNT(*) AS ユーザ数
+# ユーザテーブルから
+FROM
+	usr
+# 住所(都道府県名)でグループ化する
+GROUP BY
+	prefecture
+;
