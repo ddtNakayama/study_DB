@@ -1,12 +1,12 @@
-# ISBN�R�[�h�A�����A�o�ŎЂ��擾����
+# ISBNコード、書名、出版社を取得する
 SELECT
 	isbn,
 	title,
 	publish
-# ���Џ��e�[�u������
+# 書籍情報テーブルから
 FROM
 	books
-# �o�ŎЂ��u���oBP�v�A�u�ĉj�Ёv�̃��R�[�h��ΏۂƂ���
+# 出版社が「日経BP」、「翔泳社」のレコードを対象とする
 WHERE
-	publish IN ('���oBP','�ĉj��')
+	publish IN ('日経BP','翔泳社')
 ;
