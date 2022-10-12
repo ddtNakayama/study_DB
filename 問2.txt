@@ -1,0 +1,8 @@
+# 商品名と単価を取得する
+SELECT
+	p_name,
+	price
+# 商品テーブルから
+FROM
+	product
+;
