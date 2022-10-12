@@ -9,3 +9,15 @@ WHERE
 	# 「=」があるため5,000円が含まれてしまう
 	price <= 5000
 ;
+
+
+
+SELECT
+	title,
+	publish,
+	price
+FROM
+	books
+WHERE
+	price < 5000
+;
