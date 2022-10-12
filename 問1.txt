@@ -1,0 +1,14 @@
+# 書名、価格を取得する
+SELECT
+	title,
+	price
+# 書籍情報テーブルから
+FROM
+	books
+# 価格が2500～3500のレコードを対象とする
+WHERE
+	price BETWEEN 2500 AND 3500
+# 価格の昇順にソートする
+ORDER BY
+	price
+;
