@@ -1,10 +1,10 @@
-# �{���̊��z���擾����
+# 本書の感想を取得する
 SELECT
 	answer2
-# �A���P�[�g�񓚃e�[�u������
+# アンケート回答テーブルから
 FROM
 	quest
-# �{���̊��z��NULL�łȂ����R�[�h��ΏۂƂ���
+# 本書の感想がNULLでないレコードを対象とする
 WHERE
 	answer2 IS NOT NULL
 ;
