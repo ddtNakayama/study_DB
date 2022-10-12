@@ -1,0 +1,31 @@
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+	publish='秀和システム'
+	# 「秀和システム」または「日経BP」とするならORでなければならない　←①
+		AND
+	publish='日経BP'
+	# かつ3,000円未満とするならANDにし、①をかっこで括る必要がある
+		OR
+	price < 3000
+;
+
+
+
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+	(
+		publish='秀和システム'
+			OR
+		publish='日経BP'
+	)
+		AND
+	price < 3000
+;
