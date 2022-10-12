@@ -1,0 +1,14 @@
+# 書名、刊行日を取得する
+SELECT
+	title,
+	publish_date
+# 書籍情報テーブル
+FROM
+	books
+# 刊行日の降順でソートする
+ORDER BY
+	publish_date DESC
+# 3行目から5件取得する
+LIMIT
+	2,5
+;
