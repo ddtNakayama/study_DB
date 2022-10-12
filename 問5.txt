@@ -1,9 +1,9 @@
 SELECT
-	# SELECT��̍Ō�Ɂu,�v�͕s�v
+	# SELECT句の最後に「,」は不要
 	title,
 FROM
 	books
 WHERE
-	# '%��'��������
-	publish LIKE '_��'
+	# '%社'が正しい
+	publish LIKE '_社'
 ;
