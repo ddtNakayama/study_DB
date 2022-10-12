@@ -1,0 +1,12 @@
+# 性別ごとの年齢の最大、最小を取得する
+SELECT
+	sex,
+	MAX(age),
+	MIN(age)
+# アンケート回答テーブルから
+FROM
+	quest
+# 性別でグループ化する
+GROUP BY
+	sex
+;
