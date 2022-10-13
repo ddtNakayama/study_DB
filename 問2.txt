@@ -1,0 +1,18 @@
+# 店舗名、売上高(千円)を取得する
+SELECT
+	sh.s_name,
+	sl.s_value
+# 店舗テーブルと月間売り上げテーブルを店舗コードで結合する
+FROM
+	shop AS sh
+INNER JOIN
+	sales AS sl
+ON
+	sh.s_id = sl.s_id
+# 売り上げ対象年月が2012/12のレコードを対象とする
+WHERE
+	sl.s_date = '2012-12'
+# 売上高(千円)を降順にソートする
+ORDER BY
+	sl.s_value DESC
+;
