@@ -1,0 +1,21 @@
+# 利用者名(氏)、利用者名(名)、貸し出しIDの件数を取得する
+SELECT
+	u.l_name,
+	u.f_name,
+	COUNT(r.id)
+# ユーザテーブルを貸し出し記録テーブルと外部結合する
+FROM
+	rental AS r
+RIGHT OUTER JOIN
+	usr AS u
+ON
+	r.user_id = u.user_id
+# 利用者コード、利用者名(氏)、利用者名(名)ごとにグループ化する
+GROUP BY
+	u.user_id,
+	u.l_name,
+	u.f_name
+# 貸し出しIDの件数の降順にソートする
+ORDER BY
+	COUNT(r.id) DESC
+;
