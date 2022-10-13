@@ -1,0 +1,23 @@
+# リンク元のURL、リンク元のURLごとのレコード件数、レコード件数ごとのランクを取得する
+# ランクはレコード件数が10件未満を「C」、50件未満を「B」、それ以外を「A」とする
+SELECT
+	referer,
+	COUNT(*) AS アクセス数,
+	CASE
+		WHEN COUNT(*) < 10 THEN 'C'
+		WHEN COUNT(*) < 50 THEN 'B'
+		ELSE 'A'
+	END AS ランク
+# アクセス記録テーブルから
+FROM
+	access_log
+# リンク元のURLごとにグループ化する
+GROUP BY
+	referer
+# レコード件数が3件以上のレコードを対象とする
+HAVING
+	アクセス数 >= 3
+# レコード件数の降順にソートする
+ORDER BY
+	アクセス数 DESC
+;
