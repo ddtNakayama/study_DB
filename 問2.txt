@@ -1,0 +1,20 @@
+# 月間売り上げテーブルにレコードを追加する
+INSERT INTO
+	sales
+	(
+		# 店舗コード
+		s_id,
+		# 売り上げ対象年月
+		s_date,
+		# 売上高（千円）
+		s_value
+	)
+# 追加するレコードは店舗テーブルから取得する
+# 売上高（千円）には0固定とする
+SELECT
+	s_id,
+	DATE_FORMAT(CURRENT_DATE,'%Y-%m'),
+	0
+FROM
+	shop
+;
