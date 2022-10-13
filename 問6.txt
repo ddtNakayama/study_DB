@@ -1,0 +1,20 @@
+# リンク元のURLごとにレコード件数を取得する
+SELECT
+	referer,
+	COUNT(*)
+# アクセス記録テーブルから
+FROM
+	access_log
+# アクセス日時の日付が2013/1/1以上のレコードを対象とする
+WHERE
+	access_date >= '2013-01-01'
+# リンク元のURLごとにグループ化する
+GROUP BY
+	referer
+# レコード件数が5件未満のレコードを対象とする
+HAVING
+	COUNT(*) < 5
+# レコード件数の降順にソートする
+ORDER BY
+	COUNT(*) DESC
+;
