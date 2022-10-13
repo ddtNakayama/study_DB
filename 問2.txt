@@ -1,0 +1,16 @@
+# ISBNコード、貸出日を取得する
+# それぞれには別名を設定する
+# 貸出日はYY/MM/DDの形式で表示する
+SELECT
+	isbn AS ISBNコード,
+	DATE_FORMAT(rental_date,'%y/%m/%d') AS 貸出日
+# 貸し出し記録テーブルから
+FROM
+	rental
+# 貸し出し中のレコードを対象とする
+WHERE
+	returned = 0
+# 貸出日の昇順でソートする
+ORDER BY
+	rental_date ASC
+;
