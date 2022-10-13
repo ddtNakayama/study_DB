@@ -1,0 +1,7 @@
+# 商品テーブルのレコードを更新する
+UPDATE
+	product
+SET
+	# 価格をすべて1.1倍に変更する
+	price = price * 1.1
+;
