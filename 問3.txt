@@ -1,0 +1,27 @@
+# 店舗テーブルの店舗名
+# 月間売り上げテーブルの売上高（千円）を取得する
+SELECT
+	sp.s_name,
+	sl.s_value
+# 店舗テーブルと月間売り上げテーブルを店舗コードで内部結合する
+FROM
+	shop AS sp
+INNER JOIN
+	sales AS sl
+ON
+	sp.s_id = sl.s_id
+# 売り上げ対象年月が「2012/12」かつ、当月の平均を下回るレコードを対象とする
+WHERE
+	sl.s_date = '2012-12'
+		AND
+	sl.s_value <
+	# 売り上げ対象年月が「2012/12」の売上高（千円）の平均を取得する
+	(
+		SELECT
+			AVG(s_value)
+		FROM
+			sales
+		WHERE
+			s_date = '2012-12'
+	)
+;
