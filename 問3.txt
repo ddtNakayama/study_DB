@@ -1,0 +1,12 @@
+# 利用者名(氏)と利用者名(名)を結合した値を取得する。列名は「利用者名」にする
+# 住所(都道府県名)と住所(市町村名)と住所(その他)を結合した値を取得する。列名は「住所」にする
+SELECT
+	CONCAT(l_name,f_name) AS 利用者名,
+	CONCAT(prefecture,city,o_address) AS 住所
+# ユーザテーブルから
+FROM
+	usr
+# 利用者コードの降順にソートする
+ORDER BY
+	user_id DESC
+;
