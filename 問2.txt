@@ -1,0 +1,15 @@
+# 所属部署コード、所属部署名を取得する
+SELECT
+	d.depart_id,
+	d.depart_name
+# 所属部署テーブルを社員テーブルと外部結合する
+FROM
+	depart AS d
+LEFT OUTER JOIN
+	employee AS e
+ON
+	d.depart_id = e.depart_id
+# 社員コードがNULLのレコードを対象とする
+WHERE
+	e.s_id IS NULL
+;
