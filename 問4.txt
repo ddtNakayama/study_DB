@@ -1,0 +1,20 @@
+# 社員名(氏+名)、勤務時間の平均を取得する
+SELECT
+	CONCAT(e.l_name,f_name) AS 社員氏名,
+	AVG(t.work_time) AS 勤務時間平均
+# 社員テーブルをタイムカードテーブルと外部結合する
+FROM
+	employee AS e
+LEFT OUTER JOIN
+	time_card AS t
+ON
+	e.s_id = t.s_id
+# 社員コード、社員名(氏)、社員名(名)ごとにグループ化する
+GROUP BY
+	e.s_id,
+	e.l_name,
+	e.f_name
+# 勤務時間の平均を降順にソートする
+ORDER BY
+	AVG(t.work_time) DESC
+;
