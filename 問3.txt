@@ -1,0 +1,15 @@
+# 社員テーブル(社員)の氏名、社員テーブル(上司)の氏名を取得する
+SELECT
+	CONCAT(staff.l_name,staff.f_name) AS 社員氏名,
+	CONCAT(boss.l_name,boss.f_name) AS 上司氏名
+# 社員テーブル(社員)の上司コードと社員テーブル(上司)の社員コードで内部結合する
+FROM
+	employee AS staff
+LEFT OUTER JOIN
+	employee AS boss
+ON
+	staff.b_id = boss.s_id
+# 社員テーブル(社員)の社員コードで昇順にソートする
+ORDER BY
+	staff.s_id
+;
