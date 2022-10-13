@@ -1,0 +1,20 @@
+# アンケート回答テーブルの性別が「女」の回答者名（カナ）
+# 社員テーブルの性別が「女」の社員名（氏カナ）、社員名（名カナ）を取得する
+# 重複も表示する
+	SELECT
+		q.name_kana
+	FROM
+		quest AS q
+	WHERE
+		q.sex = '女'
+UNION ALL
+	SELECT
+		CONCAT(e.l_name_kana,f_name_kana)
+	FROM
+		employee AS e
+	WHERE
+		e.sex = 2
+# 1列目（氏名のカナ）を昇順でソートする
+ORDER BY
+	1
+;
