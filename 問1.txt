@@ -1,0 +1,14 @@
+# 都道府県ごとに年齢の平均を取得する
+SELECT
+	prefecture,
+	AVG(age)
+# アンケート回答テーブルから
+FROM
+	quest
+# 都道府県ごとにグループ化する
+GROUP BY
+	prefecture
+# 年齢の平均の値が35～49のレコードを対象とする
+HAVING
+	AVG(age) BETWEEN 35 AND 49
+;
