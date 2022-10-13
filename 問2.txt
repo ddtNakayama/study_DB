@@ -1,0 +1,18 @@
+# 貸し出し記録テーブルにレコードを追加する
+INSERT INTO
+	rental
+	(
+		# 利用者コード
+		user_id,
+		# ISBNコード
+		isbn,
+		# 貸出日
+		rental_date
+	)
+VALUES
+	(
+		'B200502',
+		'4-0010-0000-0',
+		CURRENT_DATE
+	)
+;
