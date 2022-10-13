@@ -1,0 +1,11 @@
+# アンケート回答テーブルの回答者名とユーザテーブルの利用者名（氏＋名）の積集合を取得する
+	SELECT
+		q.name
+	FROM
+		quest AS q
+INTERSECT
+	SELECT
+		CONCAT(u.l_name,u.f_name)
+	FROM
+		usr AS u
+;
