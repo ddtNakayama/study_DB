@@ -1,0 +1,25 @@
+# 書籍目次テーブル(前)のコンテンツ名
+# 書籍目次テーブル(現)のコンテンツ名
+# 書籍目次テーブル(次)のコンテンツ名を取得する
+SELECT
+	cp.c_title AS 前コンテンツ名,
+	cc.c_title AS 現コンテンツ名,
+	cn.c_title AS 次コンテンツ名
+# 書籍目次テーブル(前)の次コンテンツコードと書籍目次テーブル(現)のコンテンツコードで内部結合する
+# 書籍目次テーブル(現)の次コンテンツコードと書籍目次テーブル(次)のコンテンツコードで内部結合する
+FROM
+	(
+		contents AS cp
+	INNER JOIN
+		contents AS cc
+	ON
+		cp.next_id = cc.c_id
+	)
+INNER JOIN
+	contents AS cn
+ON
+	cc.next_id = cn.c_id
+# 書籍目次テーブル(現)のコンテンツコードの昇順にソートする
+ORDER BY
+	cc.c_id
+;
