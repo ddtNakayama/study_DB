@@ -1,0 +1,14 @@
+# 著者IDごとのISBNコードの件数を取得する
+SELECT
+	author_id,
+	COUNT(isbn)
+# 著者-書籍情報テーブルから
+FROM
+	author_books
+# 著者IDごとにグループ化する
+GROUP BY
+	author_id
+# ISBNコードの件数が3件以上のレコードを対象とする
+HAVING
+	COUNT(isbn) >= 3
+;
