@@ -1,0 +1,16 @@
+# 出版社、分類IDごとにISBNコードの件数を取得する
+SELECT
+	publish,
+	category_id,
+	COUNT(isbn)
+# 書籍情報テーブルから
+FROM
+	books
+# 出版社、分類IDごとにグループ化する
+GROUP BY
+	publish,
+	category_id
+# ISBNコードのレコードが3件未満を対象とする
+HAVING
+	COUNT(isbn) < 3
+;
