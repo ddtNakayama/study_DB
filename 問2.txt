@@ -1,0 +1,17 @@
+# ISBNコード、貸出数（レコード件数）、件数ごとの評価を取得する
+# 評価はレコード件数が10件以上が「好評」、5件以上が「普通」、5件未満が「不評」とする
+SELECT
+	isbn,
+	COUNT(*) AS 貸出数,
+	CASE
+		WHEN count(*)>=10 THEN '好評'
+		WHEN count(*)>= 5 THEN '普通'
+		ELSE '不評'
+	END AS 評価
+# 貸し出し記録テーブル
+FROM
+	rental
+# ISBNコードでグループ化する
+GROUP BY
+	isbn
+;
