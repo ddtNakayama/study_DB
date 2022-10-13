@@ -1,0 +1,9 @@
+# 書籍情報テーブルのレコードを更新する
+UPDATE
+	books
+SET
+	# ISBNコードの先頭に「ISBN」を結合
+	isbn = CONCAT('ISBN',isbn),
+	# 価格を税抜きに変更
+	price = price / 1.1
+;
