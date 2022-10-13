@@ -1,0 +1,21 @@
+# 店舗コード、売上高の合計を取得する
+SELECT
+	sh.s_id,
+	SUM(sl.s_value)
+# 店舗テーブルと月間売り上げテーブルを店舗コードで結合する
+FROM
+	shop AS sh
+INNER JOIN
+	sales AS sl
+ON
+	sh.s_id = sl.s_id
+# 売り上げ対象年月が2012年のレコードを対象とする
+WHERE
+	sl.s_date LIKE '2012%'
+# 店舗コードごとにグループ化する
+GROUP BY
+	sh.s_id
+# 売上高の合計を昇順にソートする
+ORDER BY
+	SUM(sl.s_value)
+;
