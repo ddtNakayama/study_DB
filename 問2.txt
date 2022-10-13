@@ -1,0 +1,17 @@
+# 都道府県ごとに年齢の最大値を取得する
+SELECT
+	prefecture,
+	MAX(age)
+# アンケート回答テーブルから
+FROM
+	quest
+# 性別が「男」のレコードを対象とする
+WHERE
+	sex='男'
+# 都道府県ごとにグループ化する
+GROUP BY
+	prefecture
+# 年齢の最大値が60より大きいレコードを対象とする
+HAVING
+	MAX(age)>60
+;
