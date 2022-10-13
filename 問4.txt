@@ -1,0 +1,24 @@
+# 利用者名(氏+名)、レコード件数を取得する
+SELECT
+	CONCAT(us.l_name,us.f_name) AS 氏名,
+	COUNT(*) AS 貸し出し数
+# ユーザテーブルと貸し出し記録テーブルを利用者コードで結合する
+FROM
+	usr AS us
+INNER JOIN
+	rental AS rt
+ON
+	us.user_id = rt.user_id
+# 貸し出し中のレコードを対象とする
+WHERE
+	rt.returned = 0
+# 利用者コードでグループ化する
+GROUP BY 
+	us.user_id
+# レコード件数が1件以上のレコードを対象とする
+HAVING
+	COUNT(*) >= 1
+# レコード件数を降順にソートする
+ORDER BY
+	COUNT(*) DESC
+;
