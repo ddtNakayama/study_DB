@@ -1,0 +1,15 @@
+# 書籍目次テーブル(前)のコンテンツコードと、書籍目次テーブル(今)のコンテンツコードを取得する
+SELECT
+	cp.c_id AS 前のページ,
+	cn.c_id AS 現在のページ
+# 書籍目次テーブル(前)の次のコンテンツコードと書籍目次テーブル(今)のコンテンツコードで内部結合する
+FROM
+	contents AS cp
+INNER JOIN
+	contents AS cn
+ON
+	cp.next_id = cn.c_id
+# 書籍目次テーブル(今)のコンテンツコードの昇順にソートする
+ORDER BY
+	cn.c_id
+;
