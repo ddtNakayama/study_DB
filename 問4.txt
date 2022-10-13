@@ -1,0 +1,16 @@
+# 利用者名(氏+名)を取得する
+SELECT
+	CONCAT(l_name,f_name)
+# ユーザテーブルから
+FROM
+	usr
+# 利用者コードが貸し出し記録テーブルに存在しないレコードを対象とする
+WHERE
+	user_id NOT IN
+	(
+		SELECT DISTINCT
+			user_id
+		FROM
+			rental
+	)
+;
