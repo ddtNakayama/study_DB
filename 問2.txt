@@ -1,0 +1,11 @@
+# ユーザテーブルの利用者名（氏+名）からアンケート回答テーブルの回答者名を引いた利用者名を取得する
+	SELECT
+		CONCAT(u.l_name,u.f_name)
+	FROM
+		usr AS u
+EXCEPT
+	SELECT
+		q.name
+	FROM
+		quest AS q
+;
