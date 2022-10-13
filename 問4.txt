@@ -1,0 +1,7 @@
+# 書籍情報テーブルのレコードを更新する
+UPDATE
+	books
+SET
+	# ISBNコードの先頭「ISBN」を削除する
+	isbn = REPLACE(isbn,'ISBN','')
+;
