@@ -1,0 +1,15 @@
+# メニューテーブル(子)のメニュー名、メニューテーブル(親)のメニュー名を取得する
+SELECT
+	mc.title AS メニュー名,
+	mn.title AS 親メニュー名
+# メニューテーブル(子)の親メニューとメニューテーブル(親)のメニューコードで内部結合する
+FROM
+	menu AS mc
+INNER JOIN
+	menu AS mn
+ON
+	mc.parent = mn.page_id
+# メニューテーブル(子)のメニューコードの昇順にソートする
+ORDER BY
+	mc.page_id
+;
