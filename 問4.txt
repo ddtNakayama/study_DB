@@ -1,0 +1,31 @@
+SELECT
+	cp.c_id AS 前のページ,
+	cn.c_id AS 現在のページ
+FROM
+	contents AS cp
+# OUTER JOINは存在しない
+# 現在のページを起点とするためRIGHT OUTER JOINが正しい
+OUTER JOIN
+	contents AS cn
+ON
+	# 書籍目次テーブル(前)の次のコンテンツコードと
+	# 書籍目次テーブル(今)のコンテンツコードが一致するもので結合しなければならない
+	cp.next_id <> cn.c_id
+ORDER BY
+	cn.c_id ASC
+;
+
+
+
+SELECT
+	cp.c_id AS 前のページ,
+	cn.c_id AS 現在のページ
+FROM
+	contents AS cp
+RIGHT OUTER JOIN
+	contents AS cn
+ON
+	cp.next_id = cn.c_id
+ORDER BY
+	cn.c_id ASC
+;
