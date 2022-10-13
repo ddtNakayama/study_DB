@@ -1,0 +1,17 @@
+# 著者ID、著者IDごとのレコード件数、件数の評価を取得する
+# 件数の評価は4件以上を「多い」、2件以上を「普通」、それ以外を「少ない」とする
+SELECT
+	author_id AS 著者ID,
+	COUNT(isbn) AS カウント数,
+	CASE
+		WHEN COUNT(isbn) >= 4 THEN '多い'
+		WHEN COUNT(isbn) >= 2 THEN '普通'
+		ELSE '少ない'
+	END AS 評価
+# 著者-書籍情報テーブルから
+FROM
+	author_books
+# 著者IDごとにグループ化する
+GROUP BY
+	author_id
+;
