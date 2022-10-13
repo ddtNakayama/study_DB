@@ -1,0 +1,21 @@
+# 本書の評価、本書の感想を取得する
+SELECT
+	answer1,
+	answer2
+# アンケート回答テーブルから
+FROM
+	quest
+# 年齢が平均年齢を超えているレコードを対象とする
+WHERE
+	age >
+	# 平均年齢を取得する
+	(
+		SELECT
+			AVG(age)
+		FROM
+			quest
+	)
+# 本書の評価の昇順でソートする
+ORDER BY
+	answer1
+;
