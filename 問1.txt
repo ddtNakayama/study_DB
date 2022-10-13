@@ -1,0 +1,22 @@
+# タイムカードテーブルにレコードを追加する
+INSERT INTO
+	time_card
+	(
+		# 社員コード
+		s_id,
+		# 日付
+		r_date,
+		# 勤務時間
+		work_time
+	)
+# 追加するレコードの値は社員テーブルから取得する
+SELECT
+	s_id,
+	CURRENT_DATE,
+	0
+FROM
+	employee
+# 役職が「主任」「担当」「アシスタント」のいずれかのレコードを対象とする
+WHERE
+	class IN ('主任','担当','アシスタント')
+;
