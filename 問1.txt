@@ -1,0 +1,11 @@
+# 都道府県ごとに本書の評価の平均を取得する。ただし小数点以下は四捨五入する
+SELECT
+	prefecture,
+	ROUND(AVG(answer1),0) AS 評価平均
+# アンケート回答テーブルから
+FROM
+	quest
+# 都道府県ごとにグループ化する
+GROUP BY
+	prefecture
+;
