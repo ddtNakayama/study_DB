@@ -1,0 +1,18 @@
+# ISBNコード、貸し出し件数を取得する
+SELECT
+	b.isbn,
+	COUNT(r.id)
+# 書籍情報テーブルを貸し出し記録テーブルと外部結合する
+FROM
+	books AS b
+LEFT OUTER JOIN
+	rental AS r
+ON
+	b.isbn = r.isbn
+# ISBNコードごとにグループ化する
+GROUP BY
+	b.isbn
+# 貸し出し件数の降順にソートする
+ORDER BY
+	COUNT(r.id) DESC
+;
