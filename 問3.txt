@@ -1,0 +1,45 @@
+# 注文書テーブルの発注日
+# 注文書テーブルの注文番号
+# ユーザテーブルの利用者名(氏+名)
+# 商品テーブルの商品名
+# 商品テーブルの単価
+# 注文明細テーブルの購入数を取得する
+SELECT
+	om.order_date AS 発注日,
+	om.po_id AS 注文コード,
+	CONCAT(us.l_name,f_name) AS 利用者氏名,
+	pd.p_name AS 商品名,
+	pd.price AS 商品単価,
+	od.quantity AS 購入数
+FROM
+	(
+		(
+			order_main AS om
+		# 注文書テーブルと注文明細テーブルを注文番号で内部結合する
+		INNER JOIN
+			order_desc AS od
+		ON
+			om.po_id = od.po_id
+		)
+	# 注文書テーブルとユーザテーブルを利用者コードで内部結合する
+	INNER JOIN
+		usr AS us
+	ON
+		om.user_id = us.user_id
+	)
+# 注文明細テーブルと商品テーブルを商品コードで内部結合する
+INNER JOIN
+	product AS pd
+ON
+	od.p_id = pd.p_id
+# 注文書テーブルの納品日がNULLのレコードを対象とする
+WHERE
+	om.delivery_date IS NULL
+# 注文書テーブルの発注日の昇順
+# 注文書テーブルの注文番号の昇順
+# 商品テーブルの商品コードの昇順でソートする
+ORDER BY
+	om.order_date,
+	om.po_id,
+	pd.p_id
+;
