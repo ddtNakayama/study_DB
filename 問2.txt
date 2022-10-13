@@ -1,0 +1,20 @@
+# 所属部署コード、所属部署名を取得する
+SELECT
+	depart_id,
+	depart_name
+# 所属部署テーブル
+FROM
+	depart
+# 社員テーブルに存在しない所属部署コードのレコードを対象とする
+WHERE
+	NOT EXISTS
+		# 社員テーブルから所属部署テーブルの所属部署コードと一致するレコードを取得する
+		(
+		SELECT
+			*
+		FROM
+			employee
+		WHERE
+			depart.depart_id = employee.depart_id
+		)
+;
