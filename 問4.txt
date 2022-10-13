@@ -1,0 +1,12 @@
+# 出版社ごとの価格の平均を取得する
+# 平均の値は小数点以下を切り捨てる
+SELECT
+	publish,
+	FLOOR(AVG(price))
+# 書籍情報テーブルから
+FROM
+	books
+# 出版社ごとにグループ化する
+GROUP BY
+	publish
+;
