@@ -1,0 +1,7 @@
+# ユーザテーブルのレコードを更新する
+UPDATE
+	usr
+SET
+	# メールアドレスをNULLに変更する
+	email = NULL
+;
