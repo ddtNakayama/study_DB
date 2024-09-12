@@ -1,0 +1,16 @@
+# 「ALL」だと重複して取得する
+SELECT ALL
+	class,
+# 重複なしの役職を取得するのに「depart_id」は不要　※役職を重複して取得する原因になる
+	depart_id
+FROM
+	employee
+;
+
+
+
+SELECT DISTINCT
+	class
+FROM
+	employee
+;
