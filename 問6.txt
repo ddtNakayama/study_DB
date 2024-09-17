@@ -1,0 +1,16 @@
+# 社員テーブルのレコードを更新する
+UPDATE
+	employee
+SET
+	# 役職が「部長」なら「リーダ」、「課長」なら「マネージャ」に変更する
+	# それ以外はそのままにする
+	class=
+	(
+	CASE
+		class
+			WHEN '部長' THEN 'リーダ'
+			WHEN '課長' THEN 'マネージャ'
+			ELSE class
+	END
+	)
+;
