@@ -1,0 +1,15 @@
+select
+# *が+になっている
+	+
+from
+	books
+# ;が:になっている
+:
+
+
+
+select
+	*
+from
+	books
+;
